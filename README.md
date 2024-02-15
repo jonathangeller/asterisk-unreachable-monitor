@@ -30,17 +30,17 @@ Run the script with optional arguments:
 - **mute period**: Optional. Time in seconds to mute repeated alerts for the same device. Defaults to 86400 seconds (24 hours).
 
 ### Example
-Monitor all SIP peers and send notifications to admin@example.com, with a mute period of 12 hours (43200 seconds):
+Monitor SIP peers for tenant: `tenantNameHere` and send notifications to `admin@example.com`, with a mute period of 12 hours (`43200` seconds):
 
 ```bash
-./sip_peer_monitor.sh "" admin@example.com tenantNameHere
+./sip_peer_monitor.sh "" admin@example.com tenantNameHere 43200
 ```
 
 ## Cron Job Suggestion
 To automate monitoring, you can set up a cron job to run the script at desired intervals. For example, to check every 15 minutes:
 
 ```cron
-*/15 * * * * /path/to/sip_peer_monitor.sh "" admin@example.com tenantNameHere
+*/15 * * * * /path/to/sip_peer_monitor.sh "" admin@example.com tenantNameHere 43200
 ```
 
 Adjust the script path, email address, and mute period as needed.

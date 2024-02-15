@@ -8,8 +8,6 @@ This script is designed for monitoring SIP peers in Asterisk-based systems that 
 - **Email Notifications**: Sends email alerts for `UNREACHABLE` SIP peers, with detailed information including extension, last known IP, and port.
 - **Mute Period**: Configurable mute period to limit repeat notifications for the same `UNREACHABLE` SIP peer within the set timeframe.
 
-> Please note, if a monitored device transitions from an `UNREACHABLE` state back to reachable (online) and then becomes `UNREACHABLE` again, a new notification will be sent regardless of the mute period. This ensures that each significant status change is communicated, providing timely alerts for devices experiencing intermittent issues.
-
 ## Requirements
 - Asterisk-based system using `chan_sip` module.
 - `sendmail` or compatible MTA (Mail Transfer Agent) configured for sending emails from the command line.
